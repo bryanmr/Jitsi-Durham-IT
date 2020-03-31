@@ -1,17 +1,35 @@
-<html itemscope itemtype="http://schema.org/Product" prefix="og: http://ogp.me/ns#" xmlns="http://www.w3.org/1999/html">
+<html itemscope itemtype="http://schema.org/Product" prefix="og: http://ogp.me/ns#" xmlns="http://www.w3.org/1999/html" lang="en">
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 		<meta charset="utf-8">
 		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="Description" content="Web Meetings for Durham IT that use Jitsi">
+		<title>Web Conference for Durham IT</title>
+		<style>
+#meeting_id {
+	display: inline-block;
+	width: 90%; height: 75px;
+	line-height: 75px; font-size: 25px;
+	text-align: center;
+	margin: 15px;
+}
+#join_now {
+	display: inline-block;
+	font-size: 25px; line-height: 75px;
+	font-weight: bold;
+	height: 75px; width: 90%;
+	margin: 15px;
+}
+		</style>
 	</head>
 	<body>
 		<div id="setup_box" style="display: none; width: 100%; text-align: center;">
-			<img src="bull_logo.png" style="max-width: 25%">
+			<img src="bull_logo.png" style="max-width: 25%" alt="Durham IT">
 			<h1>Welcome to your Durham IT Web Meeting</h1>
 			<form onsubmit="location.assign('?meeting='+document.getElementById('meeting_id').value.replace(/\s/g, '')); return false;">
-				<label>Your 5 character meeting ID:</label>
-				<input type="text" id="meeting_id" placeholder="Your meeting ID">
-				<input type="submit" value="Join Now">
+				<label for="meeting_id">Please Input a Meeting ID</label><br>
+				<input type="text" id="meeting_id" placeholder="Your Meeting ID">
+				<input type="submit" id="join_now" value="Join Now">
 			</form>
 		</div>
 		<script src="https://meet.jit.si/external_api.js"></script>
